@@ -1,0 +1,213 @@
+//WIGHT 100VH
+.full-height {
+  height: 100vh;
+}
+//BTN
+a {
+  &.btn {
+    border-radius: 5px;
+    border: 2px solid $colorBtn;
+    font-family: $medium;
+    font-size: 1.6em;
+    color: $colorText;
+    background: transparent;
+    text-transform: uppercase;
+    padding: 16px 90px 14px;
+    cursor: pointer;
+    &:hover {
+      background: $colorBtn;
+    }
+  }
+}
+//BLOCK FOR 50%
+.sm-6 {
+  width: 50%;
+  font-size: 0;
+  img{
+    width: 100%;
+  }
+  @media (max-width: 991px){
+    width: 100%;
+  }
+}
+//BLOCK FOR WIGHT 100%
+.sm-12 {
+  width: 100%;
+}
+//CONTENT FOR BLOCK
+.content-for-block{
+  display: flex;
+  justify-content: center;
+  align-content: space-between;
+  flex-direction: column;
+  align-items: baseline;
+  padding-left: 65px;
+  font-size: 14px;
+
+  @media (max-width: 400px){
+    padding-left: 20px;
+  }
+  a.btn{
+    margin-top: 70px;
+    @media(max-width: 600px){
+      margin-top: 30px;
+    }
+  }
+  span{
+    color: $colorText;
+    line-height:1.5;
+    font-family: $black;
+    &.title{
+      font-size: 4.25em;
+      text-transform: uppercase;
+      line-height: 1.2;
+      margin-bottom: 10px;
+      @media (max-width: 1500px){
+        font-size: 3em;
+      }
+      @media (max-width: 1199px){
+        font-size: 2em;
+      }
+      @media (max-width: 991px){
+        font-size: 4.25em;
+      }
+      @media (max-width: 650px){
+        font-size: 3em;
+      }
+      @media (max-width: 500px){
+        font-size: 2em;
+      }
+      @media (max-width: 400px){
+        font-size: 1.8em;
+      }
+    }
+    &.param{
+      font-size: 2.2em;
+      text-transform: uppercase;
+      margin-bottom: 45px;
+      @media (max-width: 1500px){
+        font-size: 2em;
+        margin-bottom: 30px;
+      }
+      @media (max-width: 1199px){
+        font-size: 1.5em;
+      }
+      @media (max-width: 991px){
+        font-size: 2.2em;
+        margin-bottom: 45px;
+      }
+      @media (max-width: 650px){
+        font-size: 2em;
+        margin-bottom: 30px;
+      }
+      @media (max-width: 500px){
+        font-size: 1.5em;
+      }
+      @media (max-width: 400px){
+        font-size: 1.2em;
+        margin-bottom: 15px;
+      }
+    }
+    &.text{
+      font-family: $medium;
+      line-height: 1.7;
+      width: 95%;
+      font-size: 1.3em;
+      @media (max-width: 1500px){
+        line-height: 1.5;
+        font-size: 1.2em;
+      }
+      @media (max-width: 1199px){
+        font-size: 1.1em;
+      }
+      @media (max-width: 991px){
+        font-size: 1.3em;
+        line-height: 1.7;
+      }
+      @media (max-width: 650px){
+        line-height: 1.5;
+        font-size: 1.2em;
+      }
+      @media (max-width: 500px){
+        font-size: 1.1em;
+        line-height: 1.2;
+      }
+    }
+  }
+}
+.content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+//BG-COLOR-START*********************
+.bg-black{
+  background: $bg-black !important;
+  a {
+    &.btn {
+      &:hover {
+        color: $bg-black !important;
+      }
+    }
+  }
+}
+.bg-purple {
+  background: $purple !important;
+  a {
+    &.btn {
+      &:hover {
+        color: $purple !important;
+      }
+    }
+  }
+}
+.bg-work{
+  background: $bg-Work;
+}
+.bg-blue {
+  background: $blue !important;
+  a {
+    &.btn {
+      &:hover {
+        color: $blue !important;
+      }
+    }
+  }
+}
+
+.bg-dark-grey {
+  background: $darkGrey !important;
+  a {
+    &.btn {
+      &:hover {
+        color: $darkGrey !important;
+      }
+    }
+  }
+}
+
+.bg-light-grey {
+  background: $lightGrey !important;
+  a {
+    &.btn {
+      &:hover {
+        color: $lightGrey !important;
+      }
+    }
+  }
+}
+
+
+
+
+.remove-indentation{
+  margin-bottom: -4px;
+}
+

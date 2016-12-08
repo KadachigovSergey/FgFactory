@@ -1,0 +1,45 @@
+body {
+  background: #fff;
+  margin: 0;
+  font: $fontSize/1 $black;
+  img {
+    border: none;
+    max-width: 100%;
+    outline: none;
+    &:focus, &:hover{
+      outline: none;
+    }
+  }
+  a {
+    color: #000;
+    text-decoration: none;
+    &:hover{
+      color: #000;
+      text-decoration: none;
+    }
+    &:focus{
+      color: #000;
+      text-decoration: none;
+    }
+  }
+  ul {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+  }
+  h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+  }
+  &*:hover{
+    outline: none;
+    color: #1b6d85;
+  }
+  *{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    &:focus{
+      outline:none;
+    }
+  }
+}
