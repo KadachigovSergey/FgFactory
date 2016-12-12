@@ -1,11 +1,26 @@
 //HEADER
 header {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 9999;
+  &.header-down {
+    position: fixed;
+    transition: all .2s linear;
+
+    .is-fixed {
+      padding: 2px 39px 2px 62px;
+      transform: translateY(0px);
+      transition: all .2s linear;
+      .nav-menu {
+        padding: 20px 0 0 0;
+      }
+
+    }
+  }
 }
+
 .header {
   width: 100%;
   display: flex;
@@ -20,9 +35,11 @@ header {
   @media (max-width: 768px) {
     display: none;
   }
+
   &.is-fixed {
     background: rgba(255, 255, 255, 0.9);
-
+    transform: translateY(-112px);
+    transition: all .0s linear;
 
   }
   a {
@@ -33,7 +50,7 @@ header {
     transition: all .3s linear;
     color: #fff;
     text-transform: uppercase;
-    &:hover{
+    &:hover {
       -webkit-transition: all .1s linear;
       -moz-transition: all .1s linear;
       -ms-transition: all .1s linear;
@@ -63,8 +80,8 @@ header {
   .nav-menu {
     display: flex;
     flex-direction: row;
-    padding: 15px 0 0 0;
-    .home{
+    padding: 18px 0 0 0;
+    .home {
       display: none;
     }
     li {
@@ -75,6 +92,7 @@ header {
     }
   }
 }
+
 //MOBOLE MENU
 .slicknav_menu {
   display: none;
@@ -91,8 +109,8 @@ header {
     display: block;
     position: fixed;
   }
-  .home{
-    @media (max-width: 768px){
+  .home {
+    @media (max-width: 768px) {
       display: block;
     }
   }
@@ -101,7 +119,7 @@ header {
     text-align: right;
     text-transform: uppercase;
     font-size: 2em;
-    &:hover{
+    &:hover {
       background: none;
       color: $purple;
     }
@@ -166,6 +184,7 @@ main {
   }
   //P
   p {
+    font-family: $medium;
     color: $colorText;
     padding: 0 20px;
     text-align: center;
@@ -182,6 +201,7 @@ main {
     }
   }
 }
+
 //FOOTER
 footer {
   height: 200px;
@@ -264,3 +284,114 @@ footer {
     }
   }
 }
+
+//contact form
+.contact-form {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  @media (max-width: 1190px){
+    flex-direction: column;
+    //padding: 0 10% 0;
+  }
+
+
+  input {
+    &::-webkit-input-placeholder {
+      color: #fefefe;
+    }
+    &:-moz-placeholder {
+      color: #fefefe;
+    }
+  }
+  .input-block {
+    margin-right: 50px;
+    @media (max-width: 1090px){
+      margin-right: 0;
+    }
+  }
+  .pl-block {
+    & + .pl-block {
+      margin-top: 53px;
+    }
+    @media (max-width: 1090px){
+      margin-top: 53px;
+    }
+  }
+  .input-style {
+    font-size: 18px;
+    z-index: 99;
+    width: 100%;
+    height: 100px;
+    border: 2px solid #fff;
+    background: transparent;
+    color: $colorText;
+    padding: 0 0 0 30px;
+    &::-moz-placeholder,
+    &::-webkit-input-placeholder,
+    &:-ms-input-placeholder,
+    &:-moz-placeholder {
+      color: #fefefe;
+    }
+    &select {
+      border: none;
+    }
+
+  }
+  .comment-block {
+    .pl-block {
+      height: 100%;
+      .input-style {
+        height: 100%;
+        resize: none;
+      }
+    }
+  }
+
+  & + .button {
+    display: block;
+    text-align: center;
+    margin-top: 60px;
+    .btn {
+      display: inline-block;
+    }
+  }
+}
+
+//FORM STULLER CUSTOM SELECT
+.jq-selectbox {
+  width: 100%;
+  height: 100px;
+  &.dropdown {
+    .jq-selectbox__select {
+      border-bottom: 2px solid #fff;
+    }
+    .jq-selectbox__dropdown {
+      border-top: none;
+    }
+
+  }
+  &.dropup {
+    .jq-selectbox__dropdown {
+      border-bottom: none;
+    }
+  }
+}
+
+.jq-selectbox__select {
+
+  &:active {
+    background: transparent;
+    box-shadow: none;
+  }
+  .jq-selectbox__select-text {
+    height: 100%;
+    align-items: center;
+    display: flex;
+    color: #fefefe;
+  }
+  .jq-selectbox__trigger {
+    display: none;
+  }
+}
+
