@@ -2,22 +2,36 @@ body {
   background: #fff;
   margin: 0;
   font: $fontSize/1 $black;
+  ::-webkit-input-placeholder {
+    color: #ffffff;
+  }
+  ::-moz-placeholder {
+    color: #ffffff;
+  }
+  /* Firefox 19+ */
+  :-moz-placeholder {
+    color: #ffffff;
+  }
+  /* Firefox 18- */
+  :-ms-input-placeholder {
+    color: #ffffff;
+  }
   img {
     border: none;
     max-width: 100%;
     outline: none;
-    &:focus, &:hover{
+    &:focus, &:hover {
       outline: none;
     }
   }
   a {
     color: #000;
     text-decoration: none;
-    &:hover{
+    &:hover {
       color: #000;
       text-decoration: none;
     }
-    &:focus{
+    &:focus {
       color: #000;
       text-decoration: none;
     }
@@ -30,16 +44,15 @@ body {
   h1, h2, h3, h4, h5, h6, p {
     margin: 0;
   }
-  &*:hover{
+  & *:hover {
     outline: none;
-    color: #1b6d85;
   }
-  *{
+  * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    &:focus{
-      outline:none;
+    &:focus {
+      outline: none;
     }
   }
 }

@@ -4,7 +4,8 @@ var divheader = $('.header');
 var windowHeight = $(window).height();
 var scrol;
 
-
+(function ($) {
+    $(window).on('load', function () {
 $(window).on('scroll', function(){
     var scrollTop = $(window).scrollTop();
 
@@ -24,6 +25,9 @@ $(window).on('scroll', function(){
         header.removeClass('fixed');
     }
 });
+    });
+})(jQuery);
+
 
 (function ($){
     $(window).on('load', function () {
@@ -69,4 +73,108 @@ $(window).on('scroll', function(){
             $(nextSlide).removeClass('translate-right');
         })
     })
+})(jQuery);
+
+
+//animate for scroll
+(function ($) {
+    $(window).on('load', function () {
+        $('body,html').animate({scrollTop: 0}, 1);
+
+        var animateElementGo = $('[data-animate = animate]');
+
+        $('[data-animate = end]').addClass('animate');
+        $(window).scroll(function () {
+            var top = $(window).scrollTop() + ($(window).height() * 0.9);
+
+            for (var i = 0; i < animateElementGo.length; i++) {
+                if ($(animateElementGo[i]).offset().top < top) {
+                    $(animateElementGo[i]).addClass('animate');
+                }
+            }
+        });
+
+    });
+})(jQuery);
+
+
+//valid form $('form').submit(function (){
+
+    // var userBtn = $('#btn-for-contact-page');
+    // userBtn.on('click',function () {
+    //     var fail = false;
+    //     var userName = $('#user-name').val();
+    //     if(userName == "" || userName == " " ) {
+    //         fail = "неправельное имя";
+    //     }
+    //     if(fail){
+    //         alert(fail);
+    //         return false;
+    //     } else {
+    //         return true;
+    //     }
+    // });
+
+
+
+(function ($) {
+    $(window).on('load', function () {
+        var userBtn = $('#btn-for-contact-page');
+        var regularName = /^[a-zA-Zа-яёА-ЯЁ\s\-]+$/;
+        var regularEmail = /^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/;
+        var userForm = $('#contact-form');
+        var errorSubject = $('.error-for-subject');
+
+
+        userBtn.on('click',function () {
+            var fail = false;
+            var userName = $('#user-name');
+            var userEmail = $('#email');
+            var userSubject = $('#subject');
+
+
+            if(!regularName.test(userName.val()) || userName.val() == " ") {
+                fail = true;
+                userName.next('span').addClass('x');
+            }
+
+            if(!regularEmail.test(userEmail.val())){
+                fail = true;
+                userEmail.next('span').addClass('x');
+            }
+
+            if(userSubject.val() < 1){
+                fail = true;
+                errorSubject.addClass('x');
+            }
+            if(fail){
+                alert("When filling out an error")
+            }
+
+        });
+        var userName = $('#user-name');
+        var userEmail = $('#email');
+        var userSubject = $('#subject');
+
+        userName.on('change', function () {
+
+            if (userName.val() !== "" && userName.val() !== " ") {
+                userName.next('span').removeClass('x')
+            }
+        });
+        userEmail.on('change', function () {
+
+            if(regularEmail.test(userEmail.val())){
+                userEmail.next('span').removeClass('x');
+            }
+
+        });
+
+        userSubject.on('change', function () {
+            if(userSubject.val() >= 1){
+                errorSubject.removeClass('x');
+            }
+        });
+
+    });
 })(jQuery);

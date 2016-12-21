@@ -35,41 +35,40 @@
     <div class="wrapper">
         <h3>Have a question? Let’s talk!</h3>
 
-        <form action="">
+        <form action="" method="post" name="form-contact" id="contact-form">
             <div class="contact-form">
                 <div class="input-block sm-6">
                     <div class="pl-block">
-                        <input type="text" id="one" name="name" class="input-style" placeholder="Name">
-                        <span></span>
+                        <input type="text" id="user-name" name="name" class="input-style" placeholder="Name">
+                        <span><sup>*</sup>Invalid name.</span>
                     </div>
                     <div class="pl-block">
-                        <input type="text" id="two" name="email" class="input-style" placeholder="Email">
-                        <span></span>
+                        <input type="text" id="email" name="email" class="input-style" placeholder="Email">
+                        <span><sup>*</sup>Invalid email address.</span>
                     </div>
                     <div class="pl-block">
-                        <select name="hz" id="1" class="">
-                            <option value="" disabled selected style='display:none;'>Subject</option>
-                            <option value="">Услуга 1</option>
-                            <option value="">Услуга 2</option>
-                            <option value="">Услуга 3</option>
-                            <option value="">Услуга 4</option>
-                            <option value="">Услуга 5</option>
-                            <option value="">Услуга 6</option>
+                        <select name="subject" id="subject" class="">
+                            <option value="0" disabled selected style='display:none;'>Subject</option>
+                            <option value="1">Subject 1</option>
+                            <option value="1">Subject 2</option>
+                            <option value="1">Subject 3</option>
+                            <option value="1">Subject 4</option>
+                            <option value="1">Subject 5</option>
                         </select>
+                        <span class="error-for-subject"><sup>*</sup>Invalid subject position.</span>
                     </div>
                 </div>
                 <div class="comment-block sm-6">
                     <div class="pl-block">
-                        <textarea placeholder="Ваше сообщение" name="comment" id="2" cols="30" rows="10" class="input-style">
-
-                        </textarea>
+                        <textarea placeholder="Massage"  class="input-style"></textarea>
                         <span></span>
                     </div>
                 </div>
 
             </div>
             <div class="button">
-                <a href="#" class="btn" id="btn-for-contact-page">send massage</a>
+                <button type="button" name="button" class="btn" id="btn-for-contact-page">send massage</button>
+                <!--<a type="submit" class="btn" id="btn-for-contact-page">send massage</a>-->
             </div>
 
         </form>

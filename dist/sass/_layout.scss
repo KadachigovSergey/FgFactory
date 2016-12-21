@@ -290,7 +290,7 @@ footer {
   display: flex;
   flex-direction: row;
   align-items: stretch;
-  @media (max-width: 1190px){
+  @media (max-width: 991px){
     flex-direction: column;
     //padding: 0 10% 0;
   }
@@ -306,15 +306,15 @@ footer {
   }
   .input-block {
     margin-right: 50px;
-    @media (max-width: 1090px){
-      margin-right: 0;
-    }
+    //@media (max-width: 1090px){
+    //  margin-right: 0;
+    //}
   }
   .pl-block {
     & + .pl-block {
       margin-top: 53px;
     }
-    @media (max-width: 1090px){
+    @media (max-width: 991px){
       margin-top: 53px;
     }
   }

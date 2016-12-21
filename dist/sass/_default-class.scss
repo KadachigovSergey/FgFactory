@@ -19,6 +19,21 @@ a {
     }
   }
 }
+.btn {
+  border-radius: 5px;
+  border: 2px solid $colorBtn;
+  font-family: $medium;
+  font-size: 1.6em;
+  color: $colorText;
+  background: transparent;
+  text-transform: uppercase;
+  padding: 13px 90px 13px;
+  cursor: pointer;
+  &:hover {
+    background: $colorBtn;
+    color: #673ab7;
+  }
+}
 //BLOCK FOR 50%
 .sm-6 {
   width: 50%;
@@ -223,12 +238,31 @@ a {
 .remove-fs{
   font-size: 0;
 }
-
-
-
-
 .remove-indentation{
   margin-bottom: -4px;
 }
 
+//[data-animate]{
+//  .for-animate{
+//    opacity: 0;
+//    -webkit-transform: translateY(60px);
+//    -moz-transform: translateY(60px);
+//    -ms-transform: translateY(60px);
+//    -o-transform: translateY(60px);
+//    transform: translateY(60px);
+//    -webkit-transition: opacity 0.8s 0s ease, transform 0.8s 0s ease, -webkit-transform 0.8s 0s ease;
+//    -moz-transition: opacity 0.8s 0s ease, transform 0.8s 0s ease, -webkit-transform 0.8s 0s ease ;
+//    -ms-transition: opacity 0.8s 0s ease, transform 0.8s 0s ease, -webkit-transform 0.8s 0s ease ;
+//    -o-transition: opacity 0.8s 0s ease, transform 0.8s 0s ease, -webkit-transform 0.8s 0s ease ;
+//    transition: opacity 0.8s 0s ease, transform 0.8s 0s ease, -webkit-transform 0.8s 0s ease ;
+//  }
+//  &.animate{
+//    opacity: 1;
+//    -webkit-transform: translateY(0px);
+//    -moz-transform: translateY(0px);
+//    -ms-transform: translateY(0px);
+//    -o-transform: translateY(0px);
+//    transform: translateY(0px);
+//  }
+//}
 

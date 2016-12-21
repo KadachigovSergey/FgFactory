@@ -12,15 +12,19 @@
         });
     });
 })(jQuery);
+
+
 //plugin slicknav
 (function ($) {
     $(function () {
         $('.nav-menu').slicknav();
     });
 })(jQuery);
+
+
 //FORM STYLLER
-// (function ($) {
-//     $(function () {
+(function ($) {
+    $(function () {
         $('select').styler();
-//     });
-// })(jQuery);
+    });
+})(jQuery);
