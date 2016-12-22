@@ -669,6 +669,9 @@ main {
     @media (max-width: 991px) {
       height: auto;
     }
+    sup{
+      margin-right: 5px;
+    }
     .wrapper {
       @media (max-width: 1170px) {
         margin: 0 5% !important;

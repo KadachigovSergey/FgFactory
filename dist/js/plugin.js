@@ -148,9 +148,11 @@ $(window).on('scroll', function(){
                 errorSubject.addClass('x');
             }
             if(fail){
-                alert("When filling out an error")
+                console.log("fail");
+                return false;
+            } else {
+                return true;
             }
-
         });
         var userName = $('#user-name');
         var userEmail = $('#email');
